@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>葉至家的網站</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <h1>葉至家的網站</h1>
+    <p>我的排球秘密基地</p>
+    <p>請輸入密碼：</p>
+    <input type="text" id="passInput">
+    <br>
+    <button id="checkBtn">確認</button>
+
+    <!-- 下方圖片資訊區塊 (預設隱藏) -->
+    <div id="imageSection" style="display: none;">
+      <br><br>
+      <a href="https://mikasasports.co.jp/e/" target="_blank">
+        <img src="https://img.91app.com/webapi/imagesV3/Cropped/SalePage/10936145/0/638941253878970000?v=1.jpg" width="256" height="256" />
+      </a>
+      <p>Mikasa：經典的藍黃相間 18 片黏合面板設計，表面具有微小的凹凸氣孔，能有效減少空氣阻力，提供極佳的控球感與穩定度。</p>
+
+      <a href="https://molten.com.tw/" target="_blank">
+        <img src="https://img.shoplineapp.com/media/image_clips/6042fbc942c6e5002f68d9ac/original.jpg?1615002569" width="256" height="256" />
+      </a>
+      <p>Molten：採用獨家的飛行穩定技術，專利的字體與面料紋理設計讓球在空中飛行時更加穩定，吸汗防滑表現優異。</p>
+
+      <a href="https://conti.com.tw/" target="_blank">
+        <img src="https://www.conti.com.tw/UploadFile/GoodPic/14431513551626_middle.jpg" width="256" height="256" />
+      </a>
+      <p>Conti：採用日本進口超細纖維或高級PU貼皮，具備極佳的吸汗防滑效果與飛行穩定性。其中的高等級款式更是企業排球聯賽的指定或審定合格比賽用球，手感柔軟、不咬手，深受球隊訓練與正式比賽喜愛。</p>
+    </div>
+
+    <script>
+      document.getElementById('checkBtn').addEventListener('click', function() {
+        const inputValue = document.getElementById('passInput').value;
+        const imageSection = document.getElementById('imageSection');
+        
+        if (inputValue === '123123') {
+          imageSection.style.display = 'block'; // 密碼正確時顯示
+        } else {
+          alert('密碼錯誤！'); // 密碼錯誤時可選的提示
+          imageSection.style.display = 'none';  // 保持隱藏
+        }
+      });
+    </script>
+  </body>
+</html>
